@@ -23,3 +23,4 @@ say = "Hello"
   puts
 end
 
+100000.times { print rand(30..120).chr }
