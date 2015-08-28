@@ -12,9 +12,12 @@ dic = { :dog  => ['собака', 'пес'],
 loop do
   puts "Введите слово по английски: "
   word = gets.chomp.to_sym
-
-  puts "Переводов #{dic[word].size}"
-  puts "Перевод: "
-  dic[word].each { |w| puts w }
+  if dic.has_key? word
+    puts "Переводов #{dic[word].size}"
+    puts "Перевод: "
+    dic[word].each { |w| puts w }
+  else
+    puts "Нет такого слова в словаре"
+  end
 
 end
